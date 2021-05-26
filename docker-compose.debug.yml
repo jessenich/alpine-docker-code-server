@@ -1,0 +1,10 @@
+version: '3.4'
+
+sservices:
+  kepler-code-server:
+    image: jessenich91/alpine-code-server:latest-dev
+    build:
+      context: .
+      dockerfile: ./alpine-code-server/dockerfile
+      args:
+        - IMAGE_VERSION_TAG: latest-dev
